@@ -1,5 +1,5 @@
 ---
-title: Welcome to Quartz
+title: Programmieren in Processing
 ---
 ## IMP 8
 [[Arrays]]
