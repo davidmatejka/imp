@@ -26,8 +26,7 @@ void draw() {
 }
 ```
 
-Wichtig ist, dass `loadImage(...)` den Dateipfad als Argument nimmt. Befindet sich also das Bild nicht im selben Ordner wie die Processing-Sketch-Datei, dann muss der vollständige Dateipfad eingegeben werden.
-
+**Wichtig**: `loadImage(...)` nimmt den Dateipfad als Argument. Wenn man die Bilddatei in das Processing-Projekt platziert, reicht der Dateiname aus. Ansonsten muss der gesamt Dateipfad angegeben werden.
 # Button erstellen
 Für den Button erstellen wir in Processing einen neuen Tab, benennen ihn `Button` und schreiben folgenden Code rein.
 
@@ -108,6 +107,10 @@ void mouseClicked() {
   spiegeln.clicked();
 }
 ```
+
+Wir definieren die beiden Variablen `sw` und `spiegeln` zu Beginn als globale Variablen, damit alle Methoden darauf zugreifen können. In `setup()` initialisieren wir die beiden Buttons und können sie dann in `draw()` und `mouseClicked()` verwenden. 
+
+Dies ist notwendig, weil die GUI auf Änderungen des Nutzers reagieren können muss. Da `setup()` aber nur einmal ausgeführt wird, benötigen wir `draw()`, welche **nach** `setup()` solange wiederholt ausgeführt wird, bis das Programm geschlossen wird. Wenn wir durch unsere Eingabe (z.B. durch Mausklick) etwas ändern, wird diese Änderung direkt gezeichnet.
 # Funktionen für die Button schreiben
 ## Schwarz-Weiß
 ## Spieglen
